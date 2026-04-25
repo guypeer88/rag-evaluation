@@ -12,6 +12,7 @@ To run this project, you will need access to the following resources:
 
 1.  **FinanceBench Dataset**: Available on [Hugging Face](https://huggingface.co/datasets/PatronusAI/financebench). This dataset contains 10,231 questions and answers based on public financial filings, including ground-truth evidence strings and page numbers.
 2.  **Source PDFs**: The original 10-K and 10-Q filings are hosted in the [PatronusAI FinanceBench GitHub repository](https://github.com/patronus-ai/financebench/tree/main/pdfs).
+3.  **Google Colab**: You can also view and run the project directly on [Google Colab](https://colab.research.google.com/drive/1dYsq8bXIZIGBto17LB2OS_Wo7MXNBdEd).
 
 The pipeline is configured to automatically fetch the dataset and download the required PDFs. If you are running this locally, ensure you have an internet connection and the necessary API keys configured (see Technology Stack).
 
@@ -68,7 +69,8 @@ The evaluation framework supports iterative improvement:
 
 ## 📂 Repository Structure
 
-- `rag_pipeline_eval.ipynb`: The main notebook containing the full implementation and experiments.
+- `rag_eval.ipynb`: The main notebook containing the full implementation and experiments.
+- `guy_peer_rag_assignment_nebius_academy.py`: Python script version of the RAG pipeline.
 - `indices/`: Persisted FAISS indices for different chunking configurations.
 - `pdfs/`: Local cache of downloaded financial documents.
 - `outputs/`: Evaluation results and improvement cycle logs (Excel format).
@@ -79,3 +81,4 @@ The evaluation framework supports iterative improvement:
 ## 📈 Results Summary
 
 Initial evaluations indicated that **retrieval quality** is the primary bottleneck. While the generator (`Llama-3.3-70B`) is highly faithful to the provided context, the system often struggles to retrieve the exact page containing the supporting evidence. Future improvements involve hybrid search (combining keyword and semantic search) and reranking.
+emantic search) and reranking.
