@@ -18,7 +18,7 @@ The pipeline is configured to automatically fetch the dataset and download the r
 
 ## 🛠️ Technology Stack
 
-- **LLM**: `meta-llama/Llama-3.3-70B-Instruct` (via [Nebius AI Studio](https://nebius.ai/studio))
+- **LLM**: `meta-llama/Llama-3.3-70B-Instruct` (via [Nebius Token Factory](https://tokenfactory.nebius.com))
 - **Embeddings**: `BAAI/bge-small-en-v1.5`
 - **Vector Store**: [FAISS](https://github.com/facebookresearch/faiss)
 - **Framework**: LangChain & LangChain-Community
@@ -70,7 +70,7 @@ The evaluation framework supports iterative improvement:
 ## 📂 Repository Structure
 
 - `rag_eval.ipynb`: The main notebook containing the full implementation and experiments.
-- `guy_peer_rag_assignment_nebius_academy.py`: Python script version of the RAG pipeline.
+- `rag_eval.py`: Python script version of the RAG pipeline.
 - `indices/`: Persisted FAISS indices for different chunking configurations.
 - `pdfs/`: Local cache of downloaded financial documents.
 - `outputs/`: Evaluation results and improvement cycle logs (Excel format).
